@@ -4,6 +4,7 @@ Network notes:
 all the stuff above was designed to run locally and through vpn or some tunneling protocol.
 to makes this fully work, execute the following:
 
+```
 cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: ConfigMap
@@ -39,7 +40,7 @@ data:
 EOF
 
 kubectl rollout restart deployment/coredns -n kube-system
-
+```
 
 don't pay too much attention to the domain name, it's just a personal thing.
 
