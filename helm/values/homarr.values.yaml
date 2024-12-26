@@ -1,0 +1,34 @@
+image:
+# Overrides the image tag whose default is the chart appVersion.
+  tag: "0.14.2"
+ingress:
+  enabled: true
+  className: "nginx-internal"
+  annotations:
+  # Add any additional annotations as needed
+  hosts:
+    - host: homarr.dio.porco
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
+persistence:
+  - name: homarr-config
+    enabled: true
+    storageClassName: "local-storage"
+    accessMode: "ReadWriteOnce"
+    size: "50Mi"
+    mountPath: "/app/data/configs"
+  - name: homarr-database
+    enabled: true
+    storageClassName: "local-storage"
+    accessMode: "ReadWriteOnce"
+    size: "50Mi"
+    mountPath: "/app/database"
+  - name: homarr-icons
+    enabled: true
+    storageClassName: "local-storage"
+    accessMode: "ReadWriteOnce"
+    size: "50Mi"
+    mountPath: "/app/public/icons"

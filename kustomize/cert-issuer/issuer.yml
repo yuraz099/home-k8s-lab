@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+ name: letsencrypt
+spec:
+ acme:
+   server: https://acme-v02.api.letsencrypt.org/directory
+   email: yuriydzyuba2@gmail.com
+   privateKeySecretRef:
+     name: chart-tls
+   solvers:
+   - http01:
+       ingress:
+         class: nginx
