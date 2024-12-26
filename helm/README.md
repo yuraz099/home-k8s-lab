@@ -23,3 +23,5 @@ jellyseerr api key: 3f5683a2da194882bfa88bb0d4ce2845
 
 
 helm upgrade radarr -n jellyfin-media --set podSecurityContext.runAsUser=1000 --set podSecurityContext.runAsGroup=1000 --reuse-values ../helm-charts/radarr/
+
+
