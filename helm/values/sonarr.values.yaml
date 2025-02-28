@@ -70,10 +70,16 @@ persistence:
     mountPath: /config
     size: 1Gi  # adjust size as needed
     storageClass: local-storage
+    volumeName: local-pv-sonarr
   media:
     enabled: true
     mountPath: /media
     hostPath: /home/sleeper/media-volume  # your host path
+    type: hostPath
+  downloads:
+    enabled: true
+    mountPath: /downloads
+    hostPath: /home/sleeper/media-volume/downloads  # your host path
     type: hostPath
 
 podSecurityContext:

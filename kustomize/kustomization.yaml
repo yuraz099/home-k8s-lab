@@ -13,4 +13,5 @@ resources:
   - ./jellyfin/readarr-pv.yaml
   - ./jellyfin/sonarr-pv.yaml
   - ./jellyfin/jackett-pv.yaml
+  - ./jellyfin/qbittorrent-pv.yaml
   - ./homarr/pvs.yaml

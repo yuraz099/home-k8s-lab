@@ -58,6 +58,7 @@ persistence:
     mountPath: /config
     size: 1Gi  # adjust size as needed
     storageClass: local-storage
+    volumeName: local-pv-qbittorrent
 
   media:
     enabled: true

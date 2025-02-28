@@ -70,6 +70,7 @@ persistence:
     mountPath: /config
     size: 1Gi  # adjust size as needed
     storageClass: local-storage
+    volumeName: local-pv-readarr
   media:
     enabled: true
     mountPath: /media
